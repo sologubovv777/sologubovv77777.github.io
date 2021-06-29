@@ -10,6 +10,7 @@ nav{
     color: #fff;
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
+ 
 }
 nav > ul {
    padding: 0;
@@ -17,6 +18,7 @@ nav > ul {
 nav li{
     display: inline-block;
     vertical-align: top;
+    
 }
 nav a{
     color: #fff;
@@ -31,6 +33,7 @@ nav a:hover{
 
 input[type="checkbox"] {
     display: none;
+    /* border:solid black 2px; */
 }
 nav label {    
     display: none;
@@ -38,6 +41,7 @@ nav label {
     padding: 5px 10px;
     cursor: pointer;
     transition: 0.3s;
+    /* border:solid black 2px; */
 }
 nav label:hover{
     color: #f00;
@@ -83,9 +87,10 @@ nav label:hover{
     width: 200px;
     background: white url(https://en.js.cx/clipart/prompt.png) no-repeat left 5px;
     vertical-align: middle;
-  }
+    
+}
   
-  #prompt-form-container {
+#prompt-form-container {
     position: fixed;
     top: 0;
     left: 0;
@@ -94,16 +99,17 @@ nav label:hover{
     width: 100%;
     height: 100%;
     text-align: center;
-  }
+ 
+}
   
-  #prompt-form-container:before {
+#prompt-form-container:before {
     display: inline-block;
     height: 100%;
     content: '';
     vertical-align: middle;
-  }
+}
   
-  #cover-div {
+#cover-div {
     position: fixed;
     top: 0;
     left: 0;
@@ -112,13 +118,14 @@ nav label:hover{
     height: 100%;
     background-color: gray;
     opacity: 0.3;
-  }
+}
   
-  #prompt-form input[name="text"] {
+#prompt-form input[name="text"] {
     display: block;
     margin: 5px;
     width: 180px;
-  }
+
+}
 #register_complit{
    
     /* font-size: 30px; */
@@ -131,15 +138,25 @@ nav label:hover{
 
 
 
-
+/* @media screen and (max-width: 1300px){
+    .box{
+        width: 1000px;
+    }
+} */
 .box{
     background-image: url(../img/1569987847_0_107_1921_1187_1920x0_80_0_0_dfadc198f64447b11d974af25779b470.jpg);
     /* background:no-repeat; */
     background-size:cover;
-    border:solid rgb(46, 46, 46) 2px;
+    /* border:solid rgb(46, 46, 46) 2px; */
+}
+@media screen and (max-width: 600px){
+    .box{
+        width: 600px;
+    }
 }
 .main{
     display: flex;
+    /* border:solid black 2px; */
 }
 .photo_left{
     margin-top: 15vh;
@@ -147,11 +164,21 @@ nav label:hover{
     height: 40vh;
     margin-left: 10vw;
 }
+@media screen and (max-width: 900px){
+    .photo_left{
+        height: 25vh;
+    }
+}
 .photo_right{
     margin-top: 15vh;
     width: 30vw;
     height: 40vh;
     margin-left: 20vw;
+}
+@media screen and (max-width: 900px){
+    .photo_right{
+        height: 25vh;
+    }
 }
 /* .right_column{
     justify-content: end;
@@ -196,6 +223,11 @@ h3{
     background-size:cover;
     height: 600px;
 }
+@media screen and (max-width: 600px){
+    .box2{
+        width: 600px;
+    }
+}
 .information{
     cursor: pointer;
     margin-left: 40%;
@@ -208,7 +240,35 @@ h3{
         margin-left: 10%;
     }
 }
+li{
+    color:white;
+    margin-left: 30px;
+}
 
+
+
+/* 3ий блок */
+.block3_columnright{
+    display: flex;
+}
+
+/* @media screen and (max-width: 1300px){
+    .block3_columnright{
+        display: block;
+        width: 600px;
+
+    }
+}  */
+.img_history{
+    width: 33%;
+}
+/* @media screen and (max-width: 1300px){
+    .img_history{
+        display: block;
+        width: 600px;
+
+    }
+}  */
 
 
 
@@ -224,6 +284,11 @@ h3{
     text-align: center;
     background: #292929;
     padding: 4em 0;
+}
+@media screen and (max-width: 600px){
+    .subscribe{
+        width: 597px;
+    }
 }
 .subscribe h4 {
     font-size: 2.8em;
@@ -298,6 +363,11 @@ h3{
     background: #191919;
     padding: 1.5em 0;
     text-align: center;
+}
+@media screen and (max-width: 600px){
+    .copy-w3right{
+        width: 597px;
+    }
 }
 .copy-w3right p {
     color: #fff;
@@ -410,6 +480,7 @@ h3{
 }
 @media screen and (max-width: 1300px){
     #e-mail{
-        width: 200px;
+        width: 150px;
+        border-right:solid white 2px;
     }
 }
