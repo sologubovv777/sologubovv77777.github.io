@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src='js/new.js'></script>
+</head>
+<body>
+    <div class="box">
+      <nav>      
+        <input type="checkbox" name="menu" id="btn-menu" />
+        <label for="btn-menu">Меню</label> 
+        <ul>
+            <li><a href="#">Главная</a></li>
+            <li><a href="#">Галерея</a></li>
+            <li><a href="#">Отзывы</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#" value="регистрация" id="show-button">Регистрация</a></li>
+            <div><a href="#" id="register_complit"></a></div>
+            <!-- <div id="register_complit"></div>  -->
+        </ul>
+    </nav>
+            <!-- <input type="button" value="регистрация" id="show-button">
+            <div id="register_complit"></div> -->
+            <div id="prompt-form-container">
+              <form id="prompt-form">
+                <div id="prompt-message"></div>
+                <input name="text" type="text" placeholder="name">
+                <input name="text1" type="text" placeholder="e-mail">
+                <input name="text1" type="password" placeholder="password">
+                <input type="submit" value="Ok">
+                <input type="button" name="cancel" value="Отмена">
+              </form>
+            </div>
+            <div class="header">
+               <div class="header_text">
+                   <h1>Отдых в канаде</h1>
+                   <h3>Канада — это горнолыжные курорты, туры на обучение английскому и французскому</br>  и примечательные национальные парки. 
+                       Столица с достоинством — Оттава,</br> колоритный Квебек и обрамленный горами Ванкувер, 
+                      клены и хоккей — все о Канаде: виза и города, карты и фото.</h3>
+               </div>
+               <!-- <div id="register_complit"></div>   -->
+            </div>
+            <div class="main">
+              <div class="img">
+                <img class="photo_left" src="./img/express-entry-kanada-otbor-№-162-880x528.jpg"> 
+              </div>
+              <div class="img1">
+                <img class="photo_right" src="./img/vankuver.jpg">
+              </div>
+            </div>
+          
+    </div>     
+   
+
+  <script>
+    // Показать полупрозрачный DIV, чтобы затенить страницу
+    // (форма располагается не внутри него, а рядом, потому что она не должна быть полупрозрачной)
+    function showCover() {
+      let coverDiv = document.createElement('div');
+      coverDiv.id = 'cover-div';
+
+      // убираею возможность прокрутки страницы во время показа модального окна с формой
+      document.body.style.overflowY = 'hidden';
+
+      document.body.append(coverDiv);
+    }
+
+    function hideCover() {
+      document.getElementById('cover-div').remove();
+      document.body.style.overflowY = '';
+    }
+
+    function showPrompt(text, callback) {
+      showCover();
+      let form = document.getElementById('prompt-form');
+      let container = document.getElementById('prompt-form-container');
+      document.getElementById('prompt-message').innerHTML = text;
+      form.text.value = '';
+
+      function complete(value) {
+        hideCover();
+        container.style.display = 'none';
+        document.onkeydown = null;
+        callback(value);
+      }
+
+      form.onsubmit = function() {
+        let value = form.text.value;
+        if (value == '') return false; // игнорируем отправку пустой формы
+
+        complete(value);
+        return false;
+      };
+
+      form.cancel.onclick = function() {
+        complete(null);
+      };
+
+      document.onkeydown = function(e) {
+        if (e.key == 'Escape') {
+          complete(null);
+        }
+      };
+
+      let lastElem = form.elements[form.elements.length - 1];
+      let firstElem = form.elements[0];
+
+      lastElem.onkeydown = function(e) {
+        if (e.key == 'Tab' && !e.shiftKey) {
+          firstElem.focus();
+          return false;
+        }
+      };
+
+      firstElem.onkeydown = function(e) {
+        if (e.key == 'Tab' && e.shiftKey) {
+          lastElem.focus();
+          return false;
+        }
+      };
+
+      container.style.display = 'block';
+      form.elements.text.focus();
+    }
+    // function delite(){
+    //   document.getElementById('show-button').remove;
+    //   document.body.style.overflowY = '';
+    // }
+var elem = document.getElementById("show-button");
+var elem1 = document.getElementById('register_complit');
+
+    document.getElementById('show-button').onclick = function() {
+      showPrompt("Введите свои...данные :)", function(value) {
+        alert("Добро пожаловать: " + value);
+        elem.parentNode.removeChild(elem);  
+        document.getElementById("register_complit").innerHTML ='Здравствуйте: '+ value; 
+      });
+    };
+  
+
+  </script>
+  <!-- второй блок сайта -->
+  <div class="box2">
+  <script type="text/javascript">
+    function toggle_show(id) {
+      document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? 'block' : 'none';
+    }
+    </script>
+    </head>
+    <body>
+    
+    <div class="info">
+      <div onClick="toggle_show('bla-bla2')"><h3 class ='information'>Города и регионы</h3>
+        <div id="bla-bla2" style="display: none">
+          <li>Столица — Оттава (Ottawa), крупные города — Ванкувер (Vancouver), Квебек (Quebec), Монреаль (Montreal), Торонто (Toronto), Эдмонтон (Edmonton).</li>
+          <li>Главные снежно-горнолыжные курорты Канады
+            Биг-Вайт, Вистлер — Блэккомб, Кимберли, Серебряная звезда (Сильвер-Стар), Солнечные пики (Сан-Пикс), Тремблан, Фернье.</li>
+          <li>Национальные парки
+            Банф, Джаспер, Маунт-Робсон, Вуд-Баффало, Уотертон-Лейкс, Глейшер и Клуэйн, Пасифик-Рим, Кутней, Йохо, заповедник Ойуиттик.</li>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function toggle_show(id) {
+        document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? 'block' : 'none';
+      }
+      </script>
+    <div>
+      <div onClick="toggle_show('bla-bla1')"><h3 class ='information'>Как добраться до Канады</h3>
+        <div id="bla-bla1" style="display: none">
+          <li>Столица — Оттава (Ottawa), крупные города — Ванкувер (Vancouver), Квебек (Quebec), Монреаль (Montreal), Торонто (Toronto), Эдмонтон (Edmonton).</li>
+          <li>Главные снежно-горнолыжные курорты Канады
+            Биг-Вайт, Вистлер — Блэккомб, Кимберли, Серебряная звезда (Сильвер-Стар), Солнечные пики (Сан-Пикс), Тремблан, Фернье.</li>
+          <li>Национальные парки
+            Банф, Джаспер, Маунт-Робсон, Вуд-Баффало, Уотертон-Лейкс, Глейшер и Клуэйн, Пасифик-Рим, Кутней, Йохо, заповедник Ойуиттик.</li>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      function toggle_show(id) {
+        document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? 'block' : 'none';
+      }
+      </script>
+      </head>
+      <body>
+      
+      <div>
+        <div onClick="toggle_show('bla-bla2')"><h3 class ='information'>Города и регионы</h3>
+          <div id="bla-bla2" style="display: none">
+            <li>Столица — Оттава (Ottawa), крупные города — Ванкувер (Vancouver), Квебек (Quebec), Монреаль (Montreal), Торонто (Toronto), Эдмонтон (Edmonton).</li>
+            <li>Главные снежно-горнолыжные курорты Канады
+              Биг-Вайт, Вистлер — Блэккомб, Кимберли, Серебряная звезда (Сильвер-Стар), Солнечные пики (Сан-Пикс), Тремблан, Фернье.</li>
+            <li>Национальные парки
+              Банф, Джаспер, Маунт-Робсон, Вуд-Баффало, Уотертон-Лейкс, Глейшер и Клуэйн, Пасифик-Рим, Кутней, Йохо, заповедник Ойуиттик.</li>
+          </div>
+        </div>
+      </div>
+      <script type="text/javascript">
+        function toggle_show(id) {
+          document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? 'block' : 'none';
+        }
+        </script>
+        </head>
+        <body>
+        
+        <div>
+          <div onClick="toggle_show('bla-bla2')"><h3 class ='information'>Города и регионы</h3>
+            <div id="bla-bla2" style="display: none">
+              <li>Столица — Оттава (Ottawa), крупные города — Ванкувер (Vancouver), Квебек (Quebec), Монреаль (Montreal), Торонто (Toronto), Эдмонтон (Edmonton).</li>
+              <li>Главные снежно-горнолыжные курорты Канады
+                Биг-Вайт, Вистлер — Блэккомб, Кимберли, Серебряная звезда (Сильвер-Стар), Солнечные пики (Сан-Пикс), Тремблан, Фернье.</li>
+              <li>Национальные парки
+                Банф, Джаспер, Маунт-Робсон, Вуд-Баффало, Уотертон-Лейкс, Глейшер и Клуэйн, Пасифик-Рим, Кутней, Йохо, заповедник Ойуиттик.</li>
+            </div>
+          </div>
+        </div>
+        
+  </div>
+  <!-- footer --> 
+  <div class="subscribe wthree-sub">
+    <div class="container">
+      <h4>Вы можете подписаться</h4>
+      <form action="#" method="post">
+        <input id="e-mail" type="email" name="email" placeholder="Enter your Email..." required="">
+        <input type="submit" value="ПОДПИСАТЬСЯ">
+        <div class="clearfix"> </div>
+      </form>
+      <div class="w3lsfoter-icons social-icon">
+        <a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
+        <a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
+        <a href="#" class="social-button google"><i class="fa fa-google-plus"></i></a>
+        <a href="#" class="social-button dribbble"><i class="fa fa-dribbble"></i></a>
+      </div>
+    </div>
+  </div>
+<div class="copy-w3right">
+  <div class="container">
+  <div class="bottom-w3lnav">
+  <ul>
+  <li><a href="index.html">Главная</a></li>
+  <li><a href="about.html">Галерея</a></li>
+  <li><a href="gallery.html">Отзывы</a></li>
+  <li><a href="icons.html">Иконки</a></li>
+  <li><a href="typo.html">Контакты</a></li>
+  </ul>
+  </div>
+  <p>© 2020 Name Site. All Rights Reserved | Design by <a href="" target="_blank">Roman</a> </p>
+  </div>
+</div>
+  <script src="https://use.fontawesome.com/df966d76e1.js"></script>
+</body>
+</html>
