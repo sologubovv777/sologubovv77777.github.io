@@ -45,11 +45,11 @@ nav a{
     transition: 0.3s;
     width: 100%;
 }
-@media screen and (max-width: 600px){
+/* @media screen and (max-width: 600px){
     nav a,nav{
         width: 600px;
     }
-}
+} */
 nav a:hover{
     border: 1px solid #fff;
 }
@@ -155,11 +155,11 @@ nav label:hover{
     background: #292929;
     padding: 4em 0;
 }
-@media screen and (max-width: 600px){
+/* @media screen and (max-width: 600px){
     .subscribe{
         width: 622px;
     }
-}
+} */
 .subscribe h4 {
     font-size: 2.8em;
     color: #fff;
@@ -199,6 +199,7 @@ nav label:hover{
     background: #fff;
     font-weight: 600;
     letter-spacing: 1px;
+    
 }
 .subscribe form:hover input[type="email"] {
     border-color: #FF5722;
@@ -234,11 +235,11 @@ nav label:hover{
     padding: 1.5em 0;
     text-align: center;
 }
-@media screen and (max-width: 600px){
+/* @media screen and (max-width: 600px){
     .copy-w3right{
-        width: 660px;
+        width: 624px;
     }
-}
+} */
 .copy-w3right p {
     color: #fff;
     text-align: center;
@@ -328,12 +329,13 @@ nav label:hover{
     margin:2em auto;
     border-bottom: 1px solid #404040;
     padding-bottom: 2em;
+    border:solid black 2px;
 }
-/* @media screen and (max-width: 1000px){
+@media screen and (max-width: 620px){
     .bottom-w3lnav{
-        width: 400px;
+        display: none;
     }
-} */
+}
 .bottom-w3lnav ul{
     list-style: none;
     display: flex;
@@ -349,10 +351,11 @@ nav label:hover{
     color: #fff;
     position: relative;
     font-weight: 400;
-    padding: .5em 1.1em;
+    padding: .3em 1.1em;
     display: inline-block;
     border-radius: 2px;
     transition: .5s;
+    border:solid black 2px;
     
 }
 @media screen and (max-width: 780px){
@@ -384,7 +387,7 @@ nav label:hover{
 .block1{
     background: url(../img/1601550464_ozero-v-nacionalnom-parke-kanady-dzhaspere.jpg) no-repeat;
     background-size:cover;
-    width: 100vw;
+    /* width: 100vw; */
     height: 100vh;
     margin: 0px;
     border:0px;

@@ -6,7 +6,7 @@
   <title>Page Title</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
-  <script src='main.js'></script>
+  <script src='js/new.js'></script>
 </head>
 <body>
   <div class="main">
@@ -16,7 +16,7 @@
         <label for="btn-menu">Меню</label> 
         <ul>
             <li><a href="#">Главная</a></li>
-            <li><a href="#">Галерея</a></li>
+            <li><a href="Галерея.html">Галерея</a></li>
             <li><a href="#">Отзывы</a></li>
             <li><a href="#">Контакты</a></li>
             <li><a href="#" value="регистрация" id="show-button">Регистрация</a></li>
@@ -38,7 +38,16 @@
         </div>
     </div>
     <div class="block1">
-      
+      <!-- <div class="header"> -->
+        <div class="header_text">
+            <div class="big_text">Отдых в канаде</div>
+            <div class="smal_text">Канада — это горнолыжные курорты, туры на обучение английскому и французскому</br>  и примечательные национальные парки. 
+                Столица с достоинством — Оттава,</br> колоритный Квебек и обрамленный горами Ванкувер, 
+               клены и хоккей — все о Канаде: виза и города, карты и фото.</div>
+        </div>
+        <!-- <div id="register_complit"></div>   -->
+      <!-- </div> -->
+
     </div>
     <div class="footer">
       <!-- footer --> 
@@ -60,10 +69,11 @@
       </div>
     <div class="copy-w3right">
       <div class="container">
+        <!-- КНОПКИ ВНИЗУ СТРАНИЦЫ.  НЕ СМОГ ДОРАБОТАТЬ ПРИШЛОСЬ УДАЛИТЬ -->
         <div class="bottom-w3lnav">
           <ul>
             <li><a href="index.html">Главная</a></li>
-            <li><a href="about.html">Галерея</a></li>
+            <li><a href="Галерея.html">Галерея</a></li>
             <li><a href="gallery.html">Отзывы</a></li>
             <li><a href="icons.html">Иконки</a></li>
             <li><a href="typo.html">Контакты</a></li>
@@ -75,92 +85,6 @@
   <script src="https://use.fontawesome.com/df966d76e1.js"></script>
     </div>
   </div>
-  <script>
-    // Показать полупрозрачный DIV, чтобы затенить страницу
-    // (форма располагается не внутри него, а рядом, потому что она не должна быть полупрозрачной)
-    function showCover() {
-      let coverDiv = document.createElement('div');
-      coverDiv.id = 'cover-div';
-
-      // убираею возможность прокрутки страницы во время показа модального окна с формой
-      document.body.style.overflowY = 'hidden';
-
-      document.body.append(coverDiv);
-    }
-
-    function hideCover() {
-      document.getElementById('cover-div').remove();
-      document.body.style.overflowY = '';
-    }
-
-    function showPrompt(text, callback) {
-      showCover();
-      let form = document.getElementById('prompt-form');
-      let container = document.getElementById('prompt-form-container');
-      document.getElementById('prompt-message').innerHTML = text;
-      form.text.value = '';
-
-      function complete(value) {
-        hideCover();
-        container.style.display = 'none';
-        document.onkeydown = null;
-        callback(value);
-      }
-
-      form.onsubmit = function() {
-        let value = form.text.value;
-        if (value == '') return false; // игнорируем отправку пустой формы
-
-        complete(value);
-        return false;
-      };
-
-      form.cancel.onclick = function() {
-        complete(null);
-      };
-
-      document.onkeydown = function(e) {
-        if (e.key == 'Escape') {
-          complete(null);
-        }
-      };
-
-      let lastElem = form.elements[form.elements.length - 1];
-      let firstElem = form.elements[0];
-
-      lastElem.onkeydown = function(e) {
-        if (e.key == 'Tab' && !e.shiftKey) {
-          firstElem.focus();
-          return false;
-        }
-      };
-
-      firstElem.onkeydown = function(e) {
-        if (e.key == 'Tab' && e.shiftKey) {
-          lastElem.focus();
-          return false;
-        }
-      };
-
-      container.style.display = 'block';
-      form.elements.text.focus();
-    }
-    // function delite(){
-    //   document.getElementById('show-button').remove;
-    //   document.body.style.overflowY = '';
-    // }
-var elem = document.getElementById("show-button");
-var elem1 = document.getElementById('register_complit');
-
-    document.getElementById('show-button').onclick = function() {
-      showPrompt("Введите свои...данные :)", function(value) {
-        alert("Добро пожаловать: " + value);
-        elem.parentNode.removeChild(elem);  
-        document.getElementById("register_complit").innerHTML ='Здравствуйте: '+ value; 
-      });
-    };
-  
-
-  </script>
+  <script src='js/new.js'></script>
 </body>
 </html>
