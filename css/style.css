@@ -28,6 +28,10 @@ nav{
     font-family: 'Segoe UI', sans-serif;
     text-align: center;
     /* width: 100%; */
+    background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0f0c29, #302b63, #24243e); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0f0c29, #302b63, #24243e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
 }
 nav > ul {
    padding: 0;
@@ -385,15 +389,87 @@ nav label:hover{
 
 /* блок первый */
 .block1{
-    background: url(../img/1601550464_ozero-v-nacionalnom-parke-kanady-dzhaspere.jpg) no-repeat;
+    background: url(../img/1569987847_0_107_1921_1187_1920x0_80_0_0_dfadc198f64447b11d974af25779b470.jpg) no-repeat;
     background-size:cover;
     /* width: 100vw; */
     height: 100vh;
     margin: 0px;
     border:0px;
 }
-/* @media screen and (max-width: 600px){
-    .block1{
-        width: 500px;
+.header_text{
+    background: radial-gradient(circle farthest-corner at 100px 50px, #FBF2EB, #352A3B);
+    width: 70vw;
+    opacity: 0.8;
+    border-end-end-radius: 100px;
+}
+.big_text{
+    margin-left: 10vw;
+    font-size: 30px;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+}
+.smal_text{
+    font-size: 20px;
+    color:black;
+    width: 70vw;
+    font-family: 'Roboto', sans-serif;
+}
+@media screen and (max-width: 600px){
+    .smal_text{
+        display: none;
     }
-} */
+}
+/* фото в первом блоке */
+.photo_left,.photo_right{
+    margin-left: 20%;
+    width: 35vw;
+    height: 40vh;
+    opacity: 0.9;
+    border-radius:10%;
+    box-shadow: 0px 10px 15px 10px #000;
+}
+.photo_right{
+    margin-left: 65%;
+}
+.block1_img{
+    margin-top: 10%;
+    display: flex;
+}
+@media screen and (max-width: 1000px){
+    .photo_right{
+       display: none;
+    }
+}
+@media screen and (max-width: 1000px){
+    .photo_left{
+        margin-left: 24vw;
+       width: 50vw;
+       height: 40vh;
+    }
+}
+/* блок 2 */
+.block2 {
+    
+    font-family: 'Lobster', cursive;
+background: radial-gradient(40% 50%, #FAECD5, #CAE4D8);
+    }
+    
+    
+/* блок 3*/
+.block3_columnright {
+    display: flex;
+}
+.img_history{
+    width: 33vw;
+}
+/* блок 4 */
+.block4{
+    
+    
+}
+iframe{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+    border:0px;
+}
