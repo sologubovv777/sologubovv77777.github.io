@@ -1,18 +1,16 @@
 <!DOCTYPE html>
+<html>
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <script src='js/new.js'></script>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='css/style.css'>
+  <script src='main.js'></script>
 </head>
 <body>
-<div class="osnova">
-    <div class="box">
+  <div class="main">
+    <div class="shapka">
       <nav>      
         <input type="checkbox" name="menu" id="btn-menu" />
         <label for="btn-menu">Меню</label> 
@@ -22,43 +20,61 @@
             <li><a href="#">Отзывы</a></li>
             <li><a href="#">Контакты</a></li>
             <li><a href="#" value="регистрация" id="show-button">Регистрация</a></li>
-            <div><a href="#" id="register_complit"></a></div>
+            <li><a href="#" id="register_complit"></a></li>
             <!-- <div id="register_complit"></div>  -->
         </ul>
-    </nav>
+      </nav>
             <!-- <input type="button" value="регистрация" id="show-button">
             <div id="register_complit"></div> -->
-            <div id="prompt-form-container">
-              <form id="prompt-form">
-                <div id="prompt-message"></div>
-                <input name="text" type="text" placeholder="name">
-                <input name="text1" type="text" placeholder="e-mail">
-                <input name="text1" type="password" placeholder="password">
-                <input type="submit" value="Ok">
-                <input type="button" name="cancel" value="Отмена">
-              </form>
-            </div>
-            <div class="header">
-               <div class="header_text">
-                   <h1>Отдых в канаде</h1>
-                   <h3>Канада — это горнолыжные курорты, туры на обучение английскому и французскому</br>  и примечательные национальные парки. 
-                       Столица с достоинством — Оттава,</br> колоритный Квебек и обрамленный горами Ванкувер, 
-                      клены и хоккей — все о Канаде: виза и города, карты и фото.</h3>
-               </div>
-               <!-- <div id="register_complit"></div>   -->
-            </div>
-            <div class="main">
-              <div class="img">
-                <img class="photo_left" src="./img/express-entry-kanada-otbor-№-162-880x528.jpg"> 
-              </div>
-              <div class="img1">
-                <img class="photo_right" src="./img/vankuver.jpg">
-              </div>
-            </div>
-          
-    </div>     
-   
-
+        <div id="prompt-form-container">
+          <form id="prompt-form">
+            <div id="prompt-message"></div>
+            <input name="text" type="text" placeholder="name">
+            <input name="text1" type="text" placeholder="e-mail">
+            <input name="text1" type="password" placeholder="password">
+            <input type="submit" value="Ok">
+            <input type="button" name="cancel" value="Отмена">
+          </form>
+        </div>
+    </div>
+    <div class="block1">
+      
+    </div>
+    <div class="footer">
+      <!-- footer --> 
+      <div class="subscribe wthree-sub">
+        <div class="container">
+          <h4>Вы можете подписаться</h4>
+          <form action="#" method="post">
+            <input id="e-mail" type="email" name="email" placeholder="Enter your Email..." required="">
+            <input  type="submit" value="ПОДПИСАТЬСЯ">
+            <div class="clearfix"> </div>
+          </form>
+          <div class="w3lsfoter-icons social-icon">
+            <a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
+            <a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
+            <a href="#" class="social-button google"><i class="fa fa-google-plus"></i></a>
+            <a href="#" class="social-button dribbble"><i class="fa fa-dribbble"></i></a>
+          </div>
+        </div>
+      </div>
+    <div class="copy-w3right">
+      <div class="container">
+        <div class="bottom-w3lnav">
+          <ul>
+            <li><a href="index.html">Главная</a></li>
+            <li><a href="about.html">Галерея</a></li>
+            <li><a href="gallery.html">Отзывы</a></li>
+            <li><a href="icons.html">Иконки</a></li>
+            <li><a href="typo.html">Контакты</a></li>
+          </ul>
+        </div>
+        <p>© 2020 Name Site. All Rights Reserved | Design by <a href="" target="_blank">Roman</a> </p>
+      </div>
+    </div>
+  <script src="https://use.fontawesome.com/df966d76e1.js"></script>
+    </div>
+  </div>
   <script>
     // Показать полупрозрачный DIV, чтобы затенить страницу
     // (форма располагается не внутри него, а рядом, потому что она не должна быть полупрозрачной)
@@ -146,143 +162,5 @@ var elem1 = document.getElementById('register_complit');
   
 
   </script>
-  <!-- второй блок сайта -->
-  <div class="box2">
-  <script type="text/javascript">
-    function toggle_show(id) {
-      document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? 'block' : 'none';
-    }
-    </script>
-    </head>
-    <body>
-    
-    <div class="info">
-      <div onClick="toggle_show('bla-bla2')"><h3 class ='information'>Города и регионы</h3>
-        <div id="bla-bla2" style="display: none">
-          <li>Столица — Оттава (Ottawa), крупные города — Ванкувер (Vancouver), Квебек (Quebec), Монреаль (Montreal), Торонто (Toronto), Эдмонтон (Edmonton).</li>
-          <li>Главные снежно-горнолыжные курорты Канады
-            Биг-Вайт, Вистлер — Блэккомб, Кимберли, Серебряная звезда (Сильвер-Стар), Солнечные пики (Сан-Пикс), Тремблан, Фернье.</li>
-          <li>Национальные парки
-            Банф, Джаспер, Маунт-Робсон, Вуд-Баффало, Уотертон-Лейкс, Глейшер и Клуэйн, Пасифик-Рим, Кутней, Йохо, заповедник Ойуиттик.</li>
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript">
-      function toggle_show(id) {
-        document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? 'block' : 'none';
-      }
-      </script>
-    <div>
-      <div onClick="toggle_show('bla-bla1')"><h3 class ='information'>Как добраться до Канады</h3>
-        <div id="bla-bla1" style="display: none">
-          <li>«Аэрофлот» летает четыре раза в неделю из Москвы в Торонто (примерно 10 часов в полете). Множество европейских авиакомпаний — KLM, British Airways, Finnair, LOT, Air France, Alitalia, CSA, Lufthansa, Austrian и другие — совершают рейсы в разные города Канады с пересадкой в странах Европы. Часто именно такие варианты — самые дешевые. Например, в Оттаву летает Lufthansa ежедневным рейсом через Франкфурт.
-
-            Также возможны полеты с пересадкой в США, однако при этом потребуется транзитная американская виза, даже если не покидать транзитную зону американского аэропорта.
-            
-            Жители Минска и Киева могут добраться до Торонто с помощью все тех же европейских авиакомпаний. Из Казахстана Air Astana летает до многих европейских столиц, откуда легко можно добраться не только до Торонто, но и Оттавы, Ванкувера и других городов.</li>
-        </div>
-      </div>
-    </div>
-    <script type="text/javascript">
-      function toggle_show(id) {
-        document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? 'block' : 'none';
-      }
-      </script>
-      </head>
-      <body>
-      
-      <div>
-        <div onClick="toggle_show('bla-bla3')"><h3 class ='information'>Транспорт</h3>
-          <div id="bla-bla3" style="display: none">
-            <li>Канада — действительно очень большая страна, так что лучший вид транспорта между основными городами здесь — авиа. Железнодорожная сеть достаточно плотная и современная, но используется в основном для грузовых перевозок. Для студентов и пенсионеров предоставляются скидки, которые можно получить и при предварительном заказе билета.
-
-              На междугородных автобусных линиях конкурируют две компании — Greyhound и Voyageur. Сеть междугородных автобусных маршрутов развита очень хорошо, а автобусы достаточно комфортабельны. Автобусные маршруты пересекают всю Канаду; существуют ежедневные рейсы в Соединенные Штаты.
-              
-              Такси лучше пользоваться для поездок на короткие расстояния: дальние путешествия обойдутся недешево. Примерные тарифы: посадка в машину — 4,25 CAD, далее — 1,65 центов за каждые 150 м. Цены на странице указаны на ноябрь 2019 г. Стоимость проезда на автобусе в Оттаве и Монреале — около 3,40 CAD. Проездной на один день стоит около 5 CAD, на месяц — около 104 CAD.
-              
-              В автобусах Квебека билет стоимостью 3 CAD действует в течение 1,5 часов (в одном направлении), а билет за 3,50 CAD действителен весь день.
-              
-              В Монреале три линии метро соединяют самые посещаемые места города и обширные торговые комплексы. Билет стоит 3,25 CAD, 2 поездки — 6 CAD, месячный безлимитный проездной — 83 CAD.</li>
-          </div>
-        </div>
-      </div>
-      <script type="text/javascript">
-        function toggle_show(id) {
-          document.getElementById(id).style.display = document.getElementById(id).style.display == 'none' ? 'block' : 'none';
-        }
-        </script>
-        </head>
-        <body>
-        
-        <div>
-          <div onClick="toggle_show('bla-bla4')"><h3 class ='information'>Штаты Канады</h3>
-            <div id="bla-bla4" style="display: none">
-              <li>Провинции Нью-Брансуик, Ньюфаундленд и Лабрадор, Новая Шотландия, Остров Принца Эдуарда входят в состав региона Атлантическая Канада, который является родиной Акадийской культуры и славится своим уникальным акцентом, природными красотами (особенно в прибрежных районах), исторической красотой Галифакса, а также рыболовной и судоходной промышленностью.
-
-                Провинция Квебек — один из самых уникальных регионов Канады. Квебек известен большим количеством культурных мероприятий, классической архитектурой Монреаля и, конечно же, своим кленовым сиропом и национальным блюдом «путин». Квебек — отличный способ увидеть Старый Свет Европы, не выезжая за пределы Северной Америки!
-                
-                Провинция Онтарио — самая крупная по численности населения провинция Канады, располагающая бесконечными возможностями для путешественника: от крупнейшего мегаполиса Канады Торонто до национальной двуязычной столицы страны Оттавы, от Ниагарского водопада до огромной пустыни на севере провинции и Великих озер.
-                
-                Провинции Альберта, Манитоба и Саскачеван входят в состав Канадских Прерий — региона богатого географического разнообразия — от холмов до рапсовых фермерских полей, лесов, озер и уникальных скальных образований. Канадские Прерии — один из самых быстрорастущих регионов Канады и славится своими горнолыжными курортами Банф и Канморе.
-                
-                Провинция Британская Колумбия является одной из самых красивых в Канаде, а сердце ее, город Ванкувер — пожалуй, одним из самых либеральных и культурно разнообразных городов Северной Америки.
-                
-                Северо-западные территории, Нунавут и Юкон входят в состав региона Северная Канада и являются одними из самых отдаленных районов на всем земном шаре, а, значит, и самыми «девственными» в плане природы.
-                
-                Путин из Квебека («путИн») — это национальное канадское блюдо из картофеля фри, сыра и соуса. Трудно сказать, в чем состоит эффект всенародной любви к этому не совсем полезному для здоровья блюду.</li>
-            </div>
-          </div>
-        </div>
-        
-  </div>
-<div class="block3">
-  <div class="block3_columnleft">История Канады охватывает огромный временной период — с момента прибытия на ее земли палеоиндейцев много тысяч лет назад и по сей день. На протяжении тысячелетий Канада была заселена группой коренных народов, в среде которых развивались торговые связи, религиозные верования и социальная иерархия.
-
-    Некоторые из цивилизаций канадских аборигенов уже давно исчезли к моменту прибытия сюда первых европейцев, а следы этих цивилизаций были обнаружены в ходе археологических исследований.
-    
-    С конца 15 в. на здешние берега в составе исследовательских экспедиций прибывают французы и англичане, позже заселившие канадское побережье Атлантического океана. В 1763 г. после Семилетней войны Франция уступает почти все свои североамериканские колонии Великобритании. В 1867 г. с объединением трех британских североамериканских колоний в конфедерацию Канада фактически получила независимость и приняла название Доминион Канада. Это способствовало дальнейшему приросту провинций и территорий, а также процессу возрастания независимости от Британской империи, расширенной по Вестминстерскому статуту в 1931 г. и окончательно закрепленной законом 1982 г. В настоящее время Канада состоит из 10 провинций и 3 территорий и является конституционной монархией во главе с королевой Елизаветой II.
-    <!-- <img src="./img/d7c2e923-0e6d-42f4-b728-240b93e3e273-1.png" alt=""> -->
-  </div>
-
-
-  <div class="block3_columnright">
-    <img class="img_history" src="./img/c1wngnr4a1sk0okokg4wogogo.jpg" alt="">
-    <img class="img_history" src="./img/9ekwcv2083k08c8w0k80g0c84.jpg" alt="">
-    <img class="img_history" src="./img/ck8iqa2rlwgkokwwkcs8g84ow.jpg" alt="">
-  </div>
-</div>
-  <!-- footer --> 
-  <div class="subscribe wthree-sub">
-    <div class="container">
-      <h4>Вы можете подписаться</h4>
-      <form action="#" method="post">
-        <input id="e-mail" type="email" name="email" placeholder="Enter your Email..." required="">
-        <input type="submit" value="ПОДПИСАТЬСЯ">
-        <div class="clearfix"> </div>
-      </form>
-      <div class="w3lsfoter-icons social-icon">
-        <a href="#" class="social-button twitter"><i class="fa fa-twitter"></i></a>
-        <a href="#" class="social-button facebook"><i class="fa fa-facebook"></i></a>
-        <a href="#" class="social-button google"><i class="fa fa-google-plus"></i></a>
-        <a href="#" class="social-button dribbble"><i class="fa fa-dribbble"></i></a>
-      </div>
-    </div>
-  </div>
-<div class="copy-w3right">
-  <div class="container">
-  <div class="bottom-w3lnav">
-  <ul>
-  <li><a href="index.html">Главная</a></li>
-  <li><a href="about.html">Галерея</a></li>
-  <li><a href="gallery.html">Отзывы</a></li>
-  <li><a href="icons.html">Иконки</a></li>
-  <li><a href="typo.html">Контакты</a></li>
-  </ul>
-  </div>
-  <p>© 2020 Name Site. All Rights Reserved | Design by <a href="" target="_blank">Roman</a> </p>
-  </div>
-</div>
-  <script src="https://use.fontawesome.com/df966d76e1.js"></script>
-</div>    
 </body>
 </html>
